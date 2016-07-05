@@ -12,7 +12,6 @@
 // 尺寸
 #define JSScreenWidth [UIScreen mainScreen].bounds.size.width
 #define JSScreenHeight [UIScreen mainScreen].bounds.size.height
-
 #define TitleButtonWH 44
 #define Margin 20
 #define TitleViewW JSScreenWidth - (TitleButtonWH + Margin) * 2
