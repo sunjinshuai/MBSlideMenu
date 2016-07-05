@@ -14,10 +14,11 @@
 		4C960BF41BFDBB4F0084745E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C960BF21BFDBB4F0084745E /* LaunchScreen.storyboard */; };
 		4C960BFF1BFDBB4F0084745E /* JSItemsViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C960BFE1BFDBB4F0084745E /* JSItemsViewControllerTests.m */; };
 		4C960C0A1BFDBB4F0084745E /* JSItemsViewControllerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C960C091BFDBB4F0084745E /* JSItemsViewControllerUITests.m */; };
-		4C960C191BFDBE4D0084745E /* JSItemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C960C181BFDBE4D0084745E /* JSItemsViewController.m */; settings = {ASSET_TAGS = (); }; };
-		4C960C1C1BFDC34A0084745E /* UIView+Size.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C960C1B1BFDC34A0084745E /* UIView+Size.m */; settings = {ASSET_TAGS = (); }; };
-		4C960C251BFDD3990084745E /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C960C241BFDD3990084745E /* TestViewController.m */; settings = {ASSET_TAGS = (); }; };
-		4C960C2B1BFDE0220084745E /* JSNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C960C2A1BFDE0220084745E /* JSNavigationController.m */; settings = {ASSET_TAGS = (); }; };
+		4C960C191BFDBE4D0084745E /* JSItemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C960C181BFDBE4D0084745E /* JSItemsViewController.m */; };
+		4C960C1C1BFDC34A0084745E /* UIView+Size.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C960C1B1BFDC34A0084745E /* UIView+Size.m */; };
+		4C960C251BFDD3990084745E /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C960C241BFDD3990084745E /* TestViewController.m */; };
+		4C960C2B1BFDE0220084745E /* JSNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C960C2A1BFDE0220084745E /* JSNavigationController.m */; };
+		4CFFCBA91D2BCAF100C80566 /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CFFCBA81D2BCAF100C80566 /* NSString+Extension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,8 @@
 		4C960C241BFDD3990084745E /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 		4C960C291BFDE0220084745E /* JSNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSNavigationController.h; sourceTree = "<group>"; };
 		4C960C2A1BFDE0220084745E /* JSNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSNavigationController.m; sourceTree = "<group>"; };
+		4CFFCBA71D2BCAF100C80566 /* NSString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
+		4CFFCBA81D2BCAF100C80566 /* NSString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +126,8 @@
 				4C960C181BFDBE4D0084745E /* JSItemsViewController.m */,
 				4C960C1A1BFDC34A0084745E /* UIView+Size.h */,
 				4C960C1B1BFDC34A0084745E /* UIView+Size.m */,
+				4CFFCBA71D2BCAF100C80566 /* NSString+Extension.h */,
+				4CFFCBA81D2BCAF100C80566 /* NSString+Extension.m */,
 			);
 			path = JSItemsViewController;
 			sourceTree = "<group>";
@@ -291,6 +296,7 @@
 				4C960BE91BFDBB4F0084745E /* AppDelegate.m in Sources */,
 				4C960C251BFDD3990084745E /* TestViewController.m in Sources */,
 				4C960BE61BFDBB4F0084745E /* main.m in Sources */,
+				4CFFCBA91D2BCAF100C80566 /* NSString+Extension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -516,6 +522,7 @@
 				4C960C101BFDBB500084745E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4C960C111BFDBB500084745E /* Build configuration list for PBXNativeTarget "JSItemsViewControllerTests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +531,7 @@
 				4C960C131BFDBB500084745E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4C960C141BFDBB500084745E /* Build configuration list for PBXNativeTarget "JSItemsViewControllerUITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +540,7 @@
 				4C960C161BFDBB500084745E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
