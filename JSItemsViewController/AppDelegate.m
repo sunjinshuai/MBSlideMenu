@@ -10,6 +10,8 @@
 #import "JSNavigationController.h"
 #import "JSItemsViewController.h"
 #import "TestViewController.h"
+#import "MYSegmentViewController.h"
+#import "UIColor+Extension.h"
 
 @interface AppDelegate ()
 
@@ -26,20 +28,35 @@
     self.window.frame = [UIScreen mainScreen].bounds;
     self.window.backgroundColor = [UIColor blackColor];
     
-    JSItemsViewController *itemsController = [[JSItemsViewController alloc] init];
+//    JSItemsViewController *itemsController = [[JSItemsViewController alloc] init];
+//    //初始化creditController的自控制器
+//    TestViewController *viewController1 = [[TestViewController alloc] init];
+//    viewController1.view.backgroundColor = [UIColor redColor];
+//    TestViewController *viewController2 = [[TestViewController alloc] init];
+//    viewController2.view.backgroundColor = [UIColor yellowColor];
+//    TestViewController *viewController3 = [[TestViewController alloc] init];
+//    viewController3.view.backgroundColor = [UIColor orangeColor];
+//    [itemsController addSubControllerWithTitle:@"测试1" controller:viewController1];
+//    [itemsController addSubControllerWithTitle:@"测试2" controller:viewController2];
+//    [itemsController addSubControllerWithTitle:@"测试3" controller:viewController3];
+    
     //初始化creditController的自控制器
     TestViewController *viewController1 = [[TestViewController alloc] init];
+    viewController1.title = @"测试1";
     viewController1.view.backgroundColor = [UIColor redColor];
     TestViewController *viewController2 = [[TestViewController alloc] init];
+    viewController2.title = @"测试2";
     viewController2.view.backgroundColor = [UIColor yellowColor];
     TestViewController *viewController3 = [[TestViewController alloc] init];
+    viewController3.title = @"测试3";
     viewController3.view.backgroundColor = [UIColor orangeColor];
-    [itemsController addSubControllerWithTitle:@"测试1" controller:viewController1];
-    [itemsController addSubControllerWithTitle:@"测试2" controller:viewController2];
-    [itemsController addSubControllerWithTitle:@"测试3" controller:viewController3];
     
-    JSNavigationController *navigationController = [[JSNavigationController alloc] initWithRootViewController:itemsController];
-    self.window.rootViewController = navigationController;
+    MYSegmentViewController *segment = [[MYSegmentViewController alloc] initWithViewControllers:@[viewController1,viewController2,viewController3]];
+    segment.segmentBarHeight = 64;
+    segment.indicatorInsets = UIEdgeInsetsMake(0, 0, 0, 0);
+    segment.indicator.backgroundColor = [UIColor colorWithHexString:@"#fa4b9b"];
+    
+    self.window.rootViewController = segment;
     [self.window makeKeyAndVisible];
     
     return YES;
