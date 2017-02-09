@@ -15,13 +15,15 @@
 		4C960BFF1BFDBB4F0084745E /* JSItemsViewControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C960BFE1BFDBB4F0084745E /* JSItemsViewControllerTests.m */; };
 		4C960C0A1BFDBB4F0084745E /* JSItemsViewControllerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C960C091BFDBB4F0084745E /* JSItemsViewControllerUITests.m */; };
 		4C960C251BFDD3990084745E /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C960C241BFDD3990084745E /* TestViewController.m */; };
+		4CC202B01E4CBFB800F1034D /* MYSlideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC202AF1E4CBFB800F1034D /* MYSlideViewController.m */; };
+		4CC202B31E4CBFD500F1034D /* MYSlideSegmentBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC202B21E4CBFD500F1034D /* MYSlideSegmentBarItem.m */; };
+		4CC202BB1E4CC08400F1034D /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC202B61E4CC08400F1034D /* NSString+Extension.m */; };
+		4CC202BC1E4CC08400F1034D /* UIColor+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC202B81E4CC08400F1034D /* UIColor+Extension.m */; };
+		4CC202BD1E4CC08400F1034D /* UIView+Size.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC202BA1E4CC08400F1034D /* UIView+Size.m */; };
 		4CDFAF0E1E4CB07300E3F8E3 /* MYSegmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CDFAF0D1E4CB07300E3F8E3 /* MYSegmentViewController.m */; };
 		4CDFAF181E4CB09C00E3F8E3 /* JSItemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CDFAF111E4CB09C00E3F8E3 /* JSItemsViewController.m */; };
 		4CDFAF191E4CB09C00E3F8E3 /* JSNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CDFAF131E4CB09C00E3F8E3 /* JSNavigationController.m */; };
-		4CDFAF1A1E4CB09C00E3F8E3 /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CDFAF151E4CB09C00E3F8E3 /* NSString+Extension.m */; };
-		4CDFAF1B1E4CB09C00E3F8E3 /* UIView+Size.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CDFAF171E4CB09C00E3F8E3 /* UIView+Size.m */; };
 		4CDFAF1E1E4CB1C800E3F8E3 /* MYSegmentBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CDFAF1D1E4CB1C800E3F8E3 /* MYSegmentBarItem.m */; };
-		4CDFAF211E4CB20100E3F8E3 /* UIColor+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CDFAF201E4CB20100E3F8E3 /* UIColor+Extension.m */; };
 		4CDFAF241E4CB3BA00E3F8E3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CDFAF231E4CB3BA00E3F8E3 /* ViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -59,20 +61,24 @@
 		4C960C0B1BFDBB4F0084745E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C960C231BFDD3990084745E /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
 		4C960C241BFDD3990084745E /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+		4CC202AE1E4CBFB800F1034D /* MYSlideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYSlideViewController.h; sourceTree = "<group>"; };
+		4CC202AF1E4CBFB800F1034D /* MYSlideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYSlideViewController.m; sourceTree = "<group>"; };
+		4CC202B11E4CBFD500F1034D /* MYSlideSegmentBarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYSlideSegmentBarItem.h; sourceTree = "<group>"; };
+		4CC202B21E4CBFD500F1034D /* MYSlideSegmentBarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYSlideSegmentBarItem.m; sourceTree = "<group>"; };
+		4CC202B51E4CC08400F1034D /* NSString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
+		4CC202B61E4CC08400F1034D /* NSString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
+		4CC202B71E4CC08400F1034D /* UIColor+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extension.h"; sourceTree = "<group>"; };
+		4CC202B81E4CC08400F1034D /* UIColor+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extension.m"; sourceTree = "<group>"; };
+		4CC202B91E4CC08400F1034D /* UIView+Size.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Size.h"; sourceTree = "<group>"; };
+		4CC202BA1E4CC08400F1034D /* UIView+Size.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Size.m"; sourceTree = "<group>"; };
 		4CDFAF0C1E4CB07300E3F8E3 /* MYSegmentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYSegmentViewController.h; sourceTree = "<group>"; };
 		4CDFAF0D1E4CB07300E3F8E3 /* MYSegmentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYSegmentViewController.m; sourceTree = "<group>"; };
 		4CDFAF101E4CB09C00E3F8E3 /* JSItemsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSItemsViewController.h; sourceTree = "<group>"; };
 		4CDFAF111E4CB09C00E3F8E3 /* JSItemsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSItemsViewController.m; sourceTree = "<group>"; };
 		4CDFAF121E4CB09C00E3F8E3 /* JSNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSNavigationController.h; sourceTree = "<group>"; };
 		4CDFAF131E4CB09C00E3F8E3 /* JSNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSNavigationController.m; sourceTree = "<group>"; };
-		4CDFAF141E4CB09C00E3F8E3 /* NSString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
-		4CDFAF151E4CB09C00E3F8E3 /* NSString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
-		4CDFAF161E4CB09C00E3F8E3 /* UIView+Size.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Size.h"; sourceTree = "<group>"; };
-		4CDFAF171E4CB09C00E3F8E3 /* UIView+Size.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Size.m"; sourceTree = "<group>"; };
 		4CDFAF1C1E4CB1C800E3F8E3 /* MYSegmentBarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYSegmentBarItem.h; sourceTree = "<group>"; };
 		4CDFAF1D1E4CB1C800E3F8E3 /* MYSegmentBarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYSegmentBarItem.m; sourceTree = "<group>"; };
-		4CDFAF1F1E4CB20100E3F8E3 /* UIColor+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extension.h"; sourceTree = "<group>"; };
-		4CDFAF201E4CB20100E3F8E3 /* UIColor+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extension.m"; sourceTree = "<group>"; };
 		4CDFAF221E4CB3BA00E3F8E3 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		4CDFAF231E4CB3BA00E3F8E3 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -125,6 +131,8 @@
 		4C960BE31BFDBB4F0084745E /* JSItemsViewController */ = {
 			isa = PBXGroup;
 			children = (
+				4CC202B41E4CC08400F1034D /* Catecory */,
+				4CC202AD1E4CBFB800F1034D /* SlideViewController */,
 				4CDFAF0F1E4CB09C00E3F8E3 /* ItemsViewController */,
 				4CDFAF0B1E4CB07300E3F8E3 /* SegmentViewController */,
 				4C960BE71BFDBB4F0084745E /* AppDelegate.h */,
@@ -168,6 +176,30 @@
 			path = JSItemsViewControllerUITests;
 			sourceTree = "<group>";
 		};
+		4CC202AD1E4CBFB800F1034D /* SlideViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4CC202AE1E4CBFB800F1034D /* MYSlideViewController.h */,
+				4CC202AF1E4CBFB800F1034D /* MYSlideViewController.m */,
+				4CC202B11E4CBFD500F1034D /* MYSlideSegmentBarItem.h */,
+				4CC202B21E4CBFD500F1034D /* MYSlideSegmentBarItem.m */,
+			);
+			path = SlideViewController;
+			sourceTree = "<group>";
+		};
+		4CC202B41E4CC08400F1034D /* Catecory */ = {
+			isa = PBXGroup;
+			children = (
+				4CC202B51E4CC08400F1034D /* NSString+Extension.h */,
+				4CC202B61E4CC08400F1034D /* NSString+Extension.m */,
+				4CC202B71E4CC08400F1034D /* UIColor+Extension.h */,
+				4CC202B81E4CC08400F1034D /* UIColor+Extension.m */,
+				4CC202B91E4CC08400F1034D /* UIView+Size.h */,
+				4CC202BA1E4CC08400F1034D /* UIView+Size.m */,
+			);
+			path = Catecory;
+			sourceTree = "<group>";
+		};
 		4CDFAF0B1E4CB07300E3F8E3 /* SegmentViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -175,8 +207,6 @@
 				4CDFAF0D1E4CB07300E3F8E3 /* MYSegmentViewController.m */,
 				4CDFAF1C1E4CB1C800E3F8E3 /* MYSegmentBarItem.h */,
 				4CDFAF1D1E4CB1C800E3F8E3 /* MYSegmentBarItem.m */,
-				4CDFAF1F1E4CB20100E3F8E3 /* UIColor+Extension.h */,
-				4CDFAF201E4CB20100E3F8E3 /* UIColor+Extension.m */,
 			);
 			path = SegmentViewController;
 			sourceTree = "<group>";
@@ -188,10 +218,6 @@
 				4CDFAF111E4CB09C00E3F8E3 /* JSItemsViewController.m */,
 				4CDFAF121E4CB09C00E3F8E3 /* JSNavigationController.h */,
 				4CDFAF131E4CB09C00E3F8E3 /* JSNavigationController.m */,
-				4CDFAF141E4CB09C00E3F8E3 /* NSString+Extension.h */,
-				4CDFAF151E4CB09C00E3F8E3 /* NSString+Extension.m */,
-				4CDFAF161E4CB09C00E3F8E3 /* UIView+Size.h */,
-				4CDFAF171E4CB09C00E3F8E3 /* UIView+Size.m */,
 			);
 			path = ItemsViewController;
 			sourceTree = "<group>";
@@ -327,16 +353,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CDFAF191E4CB09C00E3F8E3 /* JSNavigationController.m in Sources */,
-				4CDFAF1B1E4CB09C00E3F8E3 /* UIView+Size.m in Sources */,
 				4CDFAF181E4CB09C00E3F8E3 /* JSItemsViewController.m in Sources */,
-				4CDFAF1A1E4CB09C00E3F8E3 /* NSString+Extension.m in Sources */,
 				4CDFAF1E1E4CB1C800E3F8E3 /* MYSegmentBarItem.m in Sources */,
 				4CDFAF241E4CB3BA00E3F8E3 /* ViewController.m in Sources */,
+				4CC202B31E4CBFD500F1034D /* MYSlideSegmentBarItem.m in Sources */,
+				4CC202BD1E4CC08400F1034D /* UIView+Size.m in Sources */,
+				4CC202BC1E4CC08400F1034D /* UIColor+Extension.m in Sources */,
 				4C960BE91BFDBB4F0084745E /* AppDelegate.m in Sources */,
 				4C960C251BFDD3990084745E /* TestViewController.m in Sources */,
-				4CDFAF211E4CB20100E3F8E3 /* UIColor+Extension.m in Sources */,
 				4CDFAF0E1E4CB07300E3F8E3 /* MYSegmentViewController.m in Sources */,
 				4C960BE61BFDBB4F0084745E /* main.m in Sources */,
+				4CC202B01E4CBFB800F1034D /* MYSlideViewController.m in Sources */,
+				4CC202BB1E4CC08400F1034D /* NSString+Extension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

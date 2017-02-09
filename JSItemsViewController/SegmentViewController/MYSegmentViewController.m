@@ -345,7 +345,6 @@ static NSString * const segmentBarItemID = @"MYSegmentBarItem";
 - (UIView *)indicator
 {
     if (!_indicator) {
-        //        CGFloat width = self.view.frame.size.width / self.viewControllers.count - self.indicatorInsets.left - self.indicatorInsets.right;
         CGFloat width = self.view.frame.size.width / self.viewControllers.count;
         CGRect frame = CGRectMake(self.indicatorInsets.left, 0, width, INDICATOR_HEIGHT);
         _indicator = [[UIView alloc] initWithFrame:frame];
