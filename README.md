@@ -1,4 +1,7 @@
 # MYSlideViewController
+
+![效果图](https://github.com/sunjinshuai/MYSementViewController/blob/master/MYSlideViewController.gif)
+
 ===================================  
 
 目前在项目中需要品牌分类的功能，于是自己就封装了一个控制器，主要用到了UICollectionView和UIScrollView的组合，效果类似电商app的嗨购和蜜芽的滚动条，感觉还行就把我的思路和制作过程写下来给大家分享一下。
