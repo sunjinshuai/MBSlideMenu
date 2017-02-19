@@ -21,8 +21,6 @@
 		4CC202BC1E4CC08400F1034D /* UIColor+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC202B81E4CC08400F1034D /* UIColor+Extension.m */; };
 		4CC202BD1E4CC08400F1034D /* UIView+Size.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC202BA1E4CC08400F1034D /* UIView+Size.m */; };
 		4CDFAF0E1E4CB07300E3F8E3 /* MYSegmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CDFAF0D1E4CB07300E3F8E3 /* MYSegmentViewController.m */; };
-		4CDFAF181E4CB09C00E3F8E3 /* JSItemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CDFAF111E4CB09C00E3F8E3 /* JSItemsViewController.m */; };
-		4CDFAF191E4CB09C00E3F8E3 /* JSNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CDFAF131E4CB09C00E3F8E3 /* JSNavigationController.m */; };
 		4CDFAF1E1E4CB1C800E3F8E3 /* MYSegmentBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CDFAF1D1E4CB1C800E3F8E3 /* MYSegmentBarItem.m */; };
 		4CDFAF241E4CB3BA00E3F8E3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CDFAF231E4CB3BA00E3F8E3 /* ViewController.m */; };
 /* End PBXBuildFile section */
@@ -73,10 +71,6 @@
 		4CC202BA1E4CC08400F1034D /* UIView+Size.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Size.m"; sourceTree = "<group>"; };
 		4CDFAF0C1E4CB07300E3F8E3 /* MYSegmentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYSegmentViewController.h; sourceTree = "<group>"; };
 		4CDFAF0D1E4CB07300E3F8E3 /* MYSegmentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYSegmentViewController.m; sourceTree = "<group>"; };
-		4CDFAF101E4CB09C00E3F8E3 /* JSItemsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSItemsViewController.h; sourceTree = "<group>"; };
-		4CDFAF111E4CB09C00E3F8E3 /* JSItemsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSItemsViewController.m; sourceTree = "<group>"; };
-		4CDFAF121E4CB09C00E3F8E3 /* JSNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSNavigationController.h; sourceTree = "<group>"; };
-		4CDFAF131E4CB09C00E3F8E3 /* JSNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSNavigationController.m; sourceTree = "<group>"; };
 		4CDFAF1C1E4CB1C800E3F8E3 /* MYSegmentBarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYSegmentBarItem.h; sourceTree = "<group>"; };
 		4CDFAF1D1E4CB1C800E3F8E3 /* MYSegmentBarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYSegmentBarItem.m; sourceTree = "<group>"; };
 		4CDFAF221E4CB3BA00E3F8E3 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -133,7 +127,6 @@
 			children = (
 				4CC202B41E4CC08400F1034D /* Catecory */,
 				4CC202AD1E4CBFB800F1034D /* SlideViewController */,
-				4CDFAF0F1E4CB09C00E3F8E3 /* ItemsViewController */,
 				4CDFAF0B1E4CB07300E3F8E3 /* SegmentViewController */,
 				4C960BE71BFDBB4F0084745E /* AppDelegate.h */,
 				4C960BE81BFDBB4F0084745E /* AppDelegate.m */,
@@ -209,17 +202,6 @@
 				4CDFAF1D1E4CB1C800E3F8E3 /* MYSegmentBarItem.m */,
 			);
 			path = SegmentViewController;
-			sourceTree = "<group>";
-		};
-		4CDFAF0F1E4CB09C00E3F8E3 /* ItemsViewController */ = {
-			isa = PBXGroup;
-			children = (
-				4CDFAF101E4CB09C00E3F8E3 /* JSItemsViewController.h */,
-				4CDFAF111E4CB09C00E3F8E3 /* JSItemsViewController.m */,
-				4CDFAF121E4CB09C00E3F8E3 /* JSNavigationController.h */,
-				4CDFAF131E4CB09C00E3F8E3 /* JSNavigationController.m */,
-			);
-			path = ItemsViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -352,8 +334,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4CDFAF191E4CB09C00E3F8E3 /* JSNavigationController.m in Sources */,
-				4CDFAF181E4CB09C00E3F8E3 /* JSItemsViewController.m in Sources */,
 				4CDFAF1E1E4CB1C800E3F8E3 /* MYSegmentBarItem.m in Sources */,
 				4CDFAF241E4CB3BA00E3F8E3 /* ViewController.m in Sources */,
 				4CC202B31E4CBFD500F1034D /* MYSlideSegmentBarItem.m in Sources */,

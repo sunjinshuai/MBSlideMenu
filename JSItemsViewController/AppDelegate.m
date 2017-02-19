@@ -7,8 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import "JSNavigationController.h"
-#import "JSItemsViewController.h"
 #import "TestViewController.h"
 #import "MYSegmentViewController.h"
 #import "UIColor+Extension.h"
@@ -52,25 +50,26 @@
     viewController3.title = @"测试3";
     viewController3.view.backgroundColor = [UIColor orangeColor];
     TestViewController *viewController4 = [[TestViewController alloc] init];
-    viewController4.title = @"测试1";
+    viewController4.title = @"测试4";
     viewController4.view.backgroundColor = [UIColor redColor];
     TestViewController *viewController5 = [[TestViewController alloc] init];
-    viewController5.title = @"测试2";
+    viewController5.title = @"测试5";
     viewController5.view.backgroundColor = [UIColor yellowColor];
     TestViewController *viewController6 = [[TestViewController alloc] init];
-    viewController6.title = @"测试3";
+    viewController6.title = @"测试6";
     viewController6.view.backgroundColor = [UIColor orangeColor];
     TestViewController *viewController7 = [[TestViewController alloc] init];
-    viewController7.title = @"测试3";
+    viewController7.title = @"测试7";
     viewController7.view.backgroundColor = [UIColor orangeColor];
     
     MYSlideViewController *segment = [[MYSlideViewController alloc] initWithViewControllers:@[viewController1,viewController2,viewController3,viewController4,viewController5,viewController6,viewController7]];
     segment.segmentBarHeight = 44;
     segment.indicatorInsets = UIEdgeInsetsMake(0, 10, 0, 10);
-    segment.segmentBarType = MYSegmentBarTypeDynamicWidth;;
+    segment.segmentBarY = 64;
+    segment.segmentBarType = MYSegmentBarTypeDynamicWidth;
     segment.indicator.backgroundColor = [UIColor colorWithHexString:@"#fa4b9b"];
-    
-    self.window.rootViewController = segment;
+    UINavigationController *navigation = [[UINavigationController alloc] initWithRootViewController:segment];
+    self.window.rootViewController = navigation;
     [self.window makeKeyAndVisible];
     
     return YES;

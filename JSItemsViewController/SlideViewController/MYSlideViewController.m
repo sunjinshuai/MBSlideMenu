@@ -65,7 +65,7 @@ static NSString * const slideSegmentBarItemID = @"MYSegmentBarItem";
         _segmentBarType = MYSegmentBarTypeDynamicWidth;
         _segmentBarHeight = 45.0f;
         _segmentBarWidth = [UIScreen mainScreen].bounds.size.width;
-        _indicatorInsets = UIEdgeInsetsMake(0, 10, 0, 10);
+        
     }
     return self;
 }
@@ -73,6 +73,8 @@ static NSString * const slideSegmentBarItemID = @"MYSegmentBarItem";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.view.backgroundColor = [UIColor whiteColor];
     
     [self setupSubviews];
     [self reset];
@@ -565,11 +567,13 @@ static NSString * const slideSegmentBarItemID = @"MYSegmentBarItem";
 - (UIScrollView *)slideView
 {
     if (!_slideView) {
-        CGRect frame = self.view.bounds;
+        CGFloat height = 0;
+        CGFloat y = 0;
         if (!self.hideSegmentBar) {
-            frame.size.height -= self.segmentBarHeight;
-            frame.origin.y = self.segmentBarHeight;
+            height = self.view.bounds.size.height - self.segmentBarHeight;
+            y = CGRectGetMaxY(self.segmentBar.frame);
         }
+        CGRect frame = CGRectMake(0, y, self.view.bounds.size.width, height);
         _slideView = [[UIScrollView alloc] initWithFrame:frame];
         [_slideView setAutoresizingMask:(UIViewAutoresizingFlexibleWidth
                                          | UIViewAutoresizingFlexibleHeight)];
@@ -588,9 +592,7 @@ static NSString * const slideSegmentBarItemID = @"MYSegmentBarItem";
 - (UICollectionView *)segmentBar
 {
     if (!_segmentBar) {
-        CGRect frame = self.view.bounds;
-        frame.size.height = self.segmentBarHeight;
-        frame.size.width = self.segmentBarWidth;
+        CGRect frame = CGRectMake(0, self.segmentBarY, self.segmentBarWidth, self.segmentBarHeight);
         _segmentBar = [[UICollectionView alloc] initWithFrame:frame collectionViewLayout:self.segmentBarLayout];
         if (self.hideSegmentBar) {
             _segmentBar.backgroundColor = [UIColor clearColor];

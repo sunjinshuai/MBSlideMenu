@@ -11,10 +11,10 @@
 
 extern NSString *const segmentBarItemID;
 
-typedef enum : NSUInteger {
+typedef NS_ENUM(NSInteger, MYSegmentBarType) {
     MYSegmentBarTypeStaticWidth,
     MYSegmentBarTypeDynamicWidth,
-} MYSegmentBarType;
+};
 
 @class MYSlideViewController;
 
@@ -48,6 +48,7 @@ typedef enum : NSUInteger {
 
 @property (nonatomic, assign) CGFloat segmentBarHeight;
 @property (nonatomic, assign) CGFloat segmentBarWidth;
+@property (nonatomic, assign) CGFloat segmentBarY;
 
 @property (nonatomic, assign) BOOL hideSegmentBar;
 
