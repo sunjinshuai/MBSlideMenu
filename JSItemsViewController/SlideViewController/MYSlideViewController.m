@@ -65,7 +65,6 @@ static NSString * const slideSegmentBarItemID = @"MYSegmentBarItem";
         _segmentBarType = MYSegmentBarTypeDynamicWidth;
         _segmentBarHeight = 45.0f;
         _segmentBarWidth = [UIScreen mainScreen].bounds.size.width;
-        
     }
     return self;
 }

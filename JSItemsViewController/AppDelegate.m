@@ -26,31 +26,19 @@
     self.window = [[UIWindow alloc] init];
     self.window.frame = [UIScreen mainScreen].bounds;
     self.window.backgroundColor = [UIColor blackColor];
-    
-//    JSItemsViewController *itemsController = [[JSItemsViewController alloc] init];
-//    //初始化creditController的自控制器
-//    TestViewController *viewController1 = [[TestViewController alloc] init];
-//    viewController1.view.backgroundColor = [UIColor redColor];
-//    TestViewController *viewController2 = [[TestViewController alloc] init];
-//    viewController2.view.backgroundColor = [UIColor yellowColor];
-//    TestViewController *viewController3 = [[TestViewController alloc] init];
-//    viewController3.view.backgroundColor = [UIColor orangeColor];
-//    [itemsController addSubControllerWithTitle:@"测试1" controller:viewController1];
-//    [itemsController addSubControllerWithTitle:@"测试2" controller:viewController2];
-//    [itemsController addSubControllerWithTitle:@"测试3" controller:viewController3];
-    
+
     //初始化creditController的自控制器
     TestViewController *viewController1 = [[TestViewController alloc] init];
     viewController1.title = @"测试1";
     viewController1.view.backgroundColor = [UIColor redColor];
     TestViewController *viewController2 = [[TestViewController alloc] init];
-    viewController2.title = @"测试2";
+    viewController2.title = @"测试2测试2";
     viewController2.view.backgroundColor = [UIColor yellowColor];
     TestViewController *viewController3 = [[TestViewController alloc] init];
     viewController3.title = @"测试3";
     viewController3.view.backgroundColor = [UIColor orangeColor];
     TestViewController *viewController4 = [[TestViewController alloc] init];
-    viewController4.title = @"测试4";
+    viewController4.title = @"测试4测试4测试4";
     viewController4.view.backgroundColor = [UIColor redColor];
     TestViewController *viewController5 = [[TestViewController alloc] init];
     viewController5.title = @"测试5";
