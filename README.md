@@ -25,11 +25,11 @@
 #pragma mark - UICollectionViewDelegateFlowLayout
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-CGFloat height = collectionView.frame.size.height;
-CGFloat width = 0;
-CGRect bgFrame = CGRectFromString(self.indicatorBgFrames[indexPath.row]);
-width = bgFrame.size.width;
-return CGSizeMake(width, height);
+  CGFloat height = collectionView.frame.size.height;
+  CGFloat width = 0;
+  CGRect bgFrame = CGRectFromString(self.indicatorBgFrames[indexPath.row]);
+  width = bgFrame.size.width;
+  return CGSizeMake(width, height);
 }
 ```
 
