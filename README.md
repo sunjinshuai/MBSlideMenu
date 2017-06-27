@@ -1,6 +1,11 @@
 # MYSlideViewController
 
-![效果图](https://github.com/sunjinshuai/MYSementViewController/blob/master/MYSlideViewController.gif)
+
+
+![效果图1](https://github.com/sunjinshuai/MYSementViewController/blob/master/MYSlideViewController1/MYSlideViewController.gif)
+
+![效果图2](https://github.com/sunjinshuai/MYSementViewController/blob/master/MYSlideViewController2/MYSlideViewController.gif)
+
 
 ===================================  
 
