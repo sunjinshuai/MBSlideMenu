@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "InNavigationViewController.h"
+#import "AboveNavigationViewController.h"
 
 @interface ViewController ()
 
@@ -19,6 +21,17 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 
+- (IBAction)inNavigation:(UIButton *)sender {
+    
+    InNavigationViewController *inNavigation = [[InNavigationViewController alloc] init];
+    [self.navigationController pushViewController:inNavigation animated:YES];
+}
+
+- (IBAction)aboveNavigation:(UIButton *)sender {
+    
+    AboveNavigationViewController *aboveNavigation = [[AboveNavigationViewController alloc] init];
+    [self.navigationController pushViewController:aboveNavigation animated:YES];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
