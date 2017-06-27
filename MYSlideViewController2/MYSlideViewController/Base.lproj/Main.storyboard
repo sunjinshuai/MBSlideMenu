@@ -37,26 +37,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F9L-Ey-5uh">
-                                <rect key="frame" x="149" y="244" width="100" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F9L-Ey-5uh">
+                                <rect key="frame" x="20" y="214" width="335" height="50"/>
                                 <color key="backgroundColor" red="0.027450980390000001" green="0.66666666669999997" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="导航栏"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Faa-ny-4fV"/>
+                                </constraints>
+                                <state key="normal" title="slideBar在NavigationBar上面"/>
                                 <connections>
                                     <action selector="inNavigation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="l17-19-17s"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dqh-Bg-zAC">
-                                <rect key="frame" x="149" y="398" width="100" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dqh-Bg-zAC">
+                                <rect key="frame" x="20" y="384" width="335" height="50"/>
                                 <color key="backgroundColor" red="0.027450980390000001" green="0.66666666669999997" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="导航栏下面"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="f4q-gi-sIh"/>
+                                </constraints>
+                                <state key="normal" title="slideBar在NavigationBar下面"/>
                                 <connections>
                                     <action selector="aboveNavigation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="39x-p5-8Ih"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="F9L-Ey-5uh" firstAttribute="leading" secondItem="dqh-Bg-zAC" secondAttribute="leading" id="3Hn-rb-Phz"/>
+                            <constraint firstItem="F9L-Ey-5uh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="NdA-7e-Syh"/>
+                            <constraint firstItem="dqh-Bg-zAC" firstAttribute="centerX" secondItem="F9L-Ey-5uh" secondAttribute="centerX" id="ent-Cc-xWg"/>
+                            <constraint firstItem="F9L-Ey-5uh" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="150" id="i7s-B8-tZN"/>
+                            <constraint firstAttribute="trailing" secondItem="F9L-Ey-5uh" secondAttribute="trailing" constant="20" id="plE-bN-pH8"/>
+                            <constraint firstItem="dqh-Bg-zAC" firstAttribute="top" secondItem="F9L-Ey-5uh" secondAttribute="bottom" constant="120" id="yFl-Ni-hke"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="FjJ-GD-Ste"/>
                 </viewController>
