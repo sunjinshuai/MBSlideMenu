@@ -14,7 +14,7 @@
 /**
  * 切换位置后的代理方法
  */
-- (void)slideSwitchDidselectAtIndex:(NSInteger)index;
+- (void)slideContentViewSelectAtIndex:(NSInteger)index;
 
 @end
 
@@ -33,17 +33,34 @@
  */
 @property (nonatomic, assign) NSInteger selectedIndex;
 /**
- * Segmented高亮颜色
+ * 按钮正常时的颜色
  */
-@property (nonatomic, strong) UIColor *tintColor;
+@property (nonatomic, strong) UIColor *itemNormalColor;
 /**
- 代理方法
+ * 按钮选中时的颜色
+ */
+@property (nonatomic, strong) UIColor *itemSelectedColor;
+/**
+ * 隐藏阴影
+ */
+@property (nonatomic, assign) BOOL hideShadow;
+/**
+ * item间距
+ */
+@property (nonatomic, assign) CGFloat itemMargin;
+
+/**
+ * slideBarFrame
+ */
+@property (nonatomic, assign) CGRect slideBarFrame;
+/**
+ * 代理方法
  */
 @property (nonatomic, weak) id <MYSlideContentViewDelegate>delegate;
 /**
  * 初始化方法
  */
-- (instancetype)initWithFrame:(CGRect)frame Titles:(NSArray<NSString *>*)titles viewControllers:(NSArray<UIViewController *>*)viewControllers;
+- (instancetype)initWithFrame:(CGRect)frame Titles:(NSArray <NSString *>*)titles viewControllers:(NSArray <UIViewController *>*)viewControllers;
 /**
  * 标题显示在ViewController中
  */

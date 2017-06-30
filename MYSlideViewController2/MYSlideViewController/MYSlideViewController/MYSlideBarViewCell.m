@@ -7,9 +7,7 @@
 //
 
 #import "MYSlideBarViewCell.h"
-#import <Masonry.h>
-
-#define WS(weakSelf)  __weak __typeof(&*self)weakSelf = self;
+#import "Constant.h"
 
 @implementation MYSlideBarViewCell
 

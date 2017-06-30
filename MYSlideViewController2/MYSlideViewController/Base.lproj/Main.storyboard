@@ -1,14 +1,34 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.17" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="QFG-Tx-gqD">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="kD6-T9-Jlh">
+            <objects>
+                <navigationController id="QFG-Tx-gqD" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kv4-U0-Ku1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="k6L-bK-uTZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RVn-LP-gEI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1367" y="55"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +36,45 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F9L-Ey-5uh">
+                                <rect key="frame" x="20" y="214" width="335" height="50"/>
+                                <color key="backgroundColor" red="0.027450980390000001" green="0.66666666669999997" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Faa-ny-4fV"/>
+                                </constraints>
+                                <state key="normal" title="slideBar在NavigationBar上面"/>
+                                <connections>
+                                    <action selector="inNavigation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="l17-19-17s"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dqh-Bg-zAC">
+                                <rect key="frame" x="20" y="384" width="335" height="50"/>
+                                <color key="backgroundColor" red="0.027450980390000001" green="0.66666666669999997" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="f4q-gi-sIh"/>
+                                </constraints>
+                                <state key="normal" title="slideBar在NavigationBar下面"/>
+                                <connections>
+                                    <action selector="aboveNavigation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="39x-p5-8Ih"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="F9L-Ey-5uh" firstAttribute="leading" secondItem="dqh-Bg-zAC" secondAttribute="leading" id="3Hn-rb-Phz"/>
+                            <constraint firstItem="F9L-Ey-5uh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="NdA-7e-Syh"/>
+                            <constraint firstItem="dqh-Bg-zAC" firstAttribute="centerX" secondItem="F9L-Ey-5uh" secondAttribute="centerX" id="ent-Cc-xWg"/>
+                            <constraint firstItem="F9L-Ey-5uh" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="150" id="i7s-B8-tZN"/>
+                            <constraint firstAttribute="trailing" secondItem="F9L-Ey-5uh" secondAttribute="trailing" constant="20" id="plE-bN-pH8"/>
+                            <constraint firstItem="dqh-Bg-zAC" firstAttribute="top" secondItem="F9L-Ey-5uh" secondAttribute="bottom" constant="120" id="yFl-Ni-hke"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="FjJ-GD-Ste"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-562.39999999999998" y="53.523238380809602"/>
         </scene>
     </scenes>
 </document>
