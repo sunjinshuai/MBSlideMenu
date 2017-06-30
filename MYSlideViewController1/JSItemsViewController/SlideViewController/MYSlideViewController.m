@@ -27,9 +27,6 @@ static NSString * const slideSegmentBarItemID = @"MYSegmentBarItem";
 
 @property (nonatomic, assign) CGFloat postion;
 
-- (void)reset;
-
-/** new */
 @property (nonatomic, assign, readwrite) NSInteger presentViewIndex;
 
 @property (nonatomic, assign, getter=isAnimated) BOOL animated;

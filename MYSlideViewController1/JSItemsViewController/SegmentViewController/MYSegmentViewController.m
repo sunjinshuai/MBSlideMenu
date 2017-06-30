@@ -21,8 +21,6 @@
 @property (nonatomic, strong) UIView *indicatorBgView;
 @property (nonatomic, strong) UICollectionViewFlowLayout *segmentBarLayout;
 
-- (void)reset;
-
 @end
 
 @implementation MYSegmentViewController
