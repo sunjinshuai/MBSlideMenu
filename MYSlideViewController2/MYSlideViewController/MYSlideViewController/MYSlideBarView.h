@@ -40,6 +40,7 @@
  * item间距
  */
 @property (nonatomic, assign) CGFloat itemMargin;
+@property (nonatomic, assign) BOOL showTitlesInNavBar;
 @property (nonatomic, assign) CGRect slideBarFrame;
 @property (nonatomic, weak) id<MYSlideBarViewDelegate>delegate;
 @property (nonatomic, assign) CGFloat progress;

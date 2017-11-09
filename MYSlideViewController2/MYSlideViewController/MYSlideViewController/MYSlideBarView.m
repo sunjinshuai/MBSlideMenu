@@ -8,65 +8,35 @@
 
 #import "MYSlideBarView.h"
 #import "MYSlideBarViewCell.h"
-<<<<<<< HEAD
-=======
 #import "Constant.h"
 
 //item间隔
 static const CGFloat ItemMargin = 10.0f;
+//button标题选中大小
+static const CGFloat ItemFontSize = 17.0f;
 //最大放大倍数
 static const CGFloat ItemMaxScale = 1.1;
->>>>>>> a8c51632bf1df33e7d6ca18c1ca4b498f75da3e5
 
 @interface MYSlideBarView ()<UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 
 @property (nonatomic, strong) UICollectionView *collectionView;
-<<<<<<< HEAD
-@property (nonatomic, strong) UIView *slideView;
-=======
+@property (nonatomic, strong) UIView *bottomLine;
 @property (nonatomic, strong) UIView *shadow;
->>>>>>> a8c51632bf1df33e7d6ca18c1ca4b498f75da3e5
 
 @end
 
 @implementation MYSlideBarView
 
-<<<<<<< HEAD
-- (instancetype)initWithFrame:(CGRect)frame {
-    if (self = [super initWithFrame:frame]) {
-        
-=======
-static NSString *reuseIdentifier = @"MYSlideBarViewCell";
-
 - (instancetype)init {
     if (self = [super init]) {
-        [self setupUI];
->>>>>>> a8c51632bf1df33e7d6ca18c1ca4b498f75da3e5
+        [self buildUI];
     }
     return self;
 }
 
-<<<<<<< HEAD
-- (void)layoutSubviews {
-    [super layoutSubviews];
-    _collectionView.frame = self.bounds;
-    //如果标题过少 自动居中
-    [_collectionView performBatchUpdates:nil completion:^(BOOL finished) {
-        if (_collectionView.contentSize.width < _collectionView.bounds.size.width) {
-            CGFloat insetX = (_collectionView.bounds.size.width - _collectionView.contentSize.width)/2.0f;
-            _collectionView.contentInset = UIEdgeInsetsMake(0, insetX, 0, insetX);
-        }
-    }];
-    //设置阴影
-    _slideView.backgroundColor = _itemSelectedColor;
-    self.selectedIndex = _selectedIndex;
-    _slideView.hidden = _hideShadow;
-}
-
-#pragma mark -
-#pragma mark CollectionViewDelegate
-=======
-- (void)setupUI {
+- (void)buildUI {
+    
+    [self addSubview:[UIView new]];
     
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
     layout.minimumLineSpacing = ItemMargin;
@@ -77,122 +47,57 @@ static NSString *reuseIdentifier = @"MYSlideBarViewCell";
     _collectionView.delegate = self;
     _collectionView.dataSource = self;
     _collectionView.backgroundColor = [UIColor clearColor];
-    [_collectionView registerClass:[MYSlideBarViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
+    [_collectionView registerClass:[MYSlideBarViewCell class] forCellWithReuseIdentifier:@"MYSlideBarViewCell"];
     _collectionView.showsHorizontalScrollIndicator = false;
     [self addSubview:_collectionView];
     
     _shadow = [[UIView alloc] init];
     [_collectionView addSubview:_shadow];
+    
+    _bottomLine = [UIView new];
+    _bottomLine.backgroundColor = [UIColor colorWithRed:204.0f/255.0f green:204.0f/255.0f blue:204.0f/255.0f alpha:1];
+    _bottomLine.frame = CGRectMake(0, _collectionView.bounds.size.height - 0.5, self.bounds.size.width, 0.5);
+    [self addSubview:_bottomLine];
+    
 }
 
 - (void)layoutSubviews {
     [super layoutSubviews];
-    self.collectionView.frame = self.bounds;
+    _collectionView.frame = self.bounds;
     // 如果标题过少 自动居中
-    [self.collectionView performBatchUpdates:nil completion:^(BOOL finished) {
-        if (self.collectionView.contentSize.width < self.collectionView.bounds.size.width) {
-            CGFloat insetX = (self.collectionView.bounds.size.width - self.collectionView.contentSize.width)/2.0f;
-            self.collectionView.contentInset = UIEdgeInsetsMake(0, insetX, 0, insetX);
+    [_collectionView performBatchUpdates:nil completion:^(BOOL finished) {
+        if (_collectionView.contentSize.width < _collectionView.bounds.size.width) {
+            CGFloat insetX = (_collectionView.bounds.size.width - _collectionView.contentSize.width)/2.0f;
+            _collectionView.contentInset = UIEdgeInsetsMake(0, insetX, 0, insetX);
         }
     }];
-    self.shadow.frame = [self shadowRectOfIndex:self.selectedIndex];
+    // 设置阴影
+    _shadow.backgroundColor = _itemSelectedColor;
+    self.selectedIndex = _selectedIndex;
+    _shadow.hidden = _hideShadow;
 }
 
-#pragma mark - UICollectionViewDelegate、UICollectionViewDataSource
->>>>>>> a8c51632bf1df33e7d6ca18c1ca4b498f75da3e5
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
-{
-    return self.titles.count;
-}
-
-- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-<<<<<<< HEAD
-    return CGSizeMake([self itemWidthOfIndexPath:indexPath], _collectionView.bounds.size.height);
-=======
-    NSString *title = self.titles[indexPath.row];
-    CGFloat titleWidth = [title sizeWithMaxWidth:MAXFLOAT font:[UIFont systemFontOfSize:17.0]].width;
-    return CGSizeMake(titleWidth, self.bounds.size.height);
->>>>>>> a8c51632bf1df33e7d6ca18c1ca4b498f75da3e5
-}
-
-- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    MYSlideBarViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"MYSlideBarViewCell" forIndexPath:indexPath];
-<<<<<<< HEAD
-    cell.textLabel.text = _titles[indexPath.row];
-    
-=======
-    cell.textLabel.text = self.titles[indexPath.row];
-    CGFloat scale = indexPath.row == _selectedIndex ? ItemMaxScale : 1;
-    cell.transform = CGAffineTransformMakeScale(scale, scale);
->>>>>>> a8c51632bf1df33e7d6ca18c1ca4b498f75da3e5
-    cell.textLabel.textColor = indexPath.row == _selectedIndex ? _itemSelectedColor : _itemNormalColor;
-    return cell;
-}
-
-<<<<<<< HEAD
-//获取文字宽度
-- (CGFloat)itemWidthOfIndexPath:(NSIndexPath*)indexPath {
-    NSString *title = _titles[indexPath.row];
-    NSStringDrawingOptions opts = NSStringDrawingUsesLineFragmentOrigin |
-    NSStringDrawingUsesFontLeading;
-    NSMutableParagraphStyle *style = [[NSMutableParagraphStyle alloc] init];
-    [style setLineBreakMode:NSLineBreakByTruncatingTail];
-    NSDictionary *attributes = @{
-                                 NSFontAttributeName:[UIFont boldSystemFontOfSize:17.0],
-                                 NSParagraphStyleAttributeName:style
-                                 };
-    CGSize textSize = [title boundingRectWithSize:CGSizeMake(self.bounds.size.width, self.bounds.size.height)
-                                          options:opts
-                                       attributes:attributes
-                                          context:nil].size;
-    return textSize.width;
-}
-
-
-- (CGRect)shadowRectOfIndex:(NSInteger)index {
-    return CGRectMake([_collectionView cellForItemAtIndexPath:[NSIndexPath indexPathForRow:index inSection:0]].frame.origin.x, self.bounds.size.height - 2, [self itemWidthOfIndexPath:[NSIndexPath indexPathForRow:index inSection:0]], 2);
-=======
-- (CGRect)shadowRectOfIndex:(NSInteger)index {
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:index inSection:0];
-    NSString *title = self.titles[indexPath.row];
-    CGFloat titleWidth = [title sizeWithMaxWidth:MAXFLOAT font:[UIFont systemFontOfSize:17.0]].width;
-    MYSlideBarViewCell *currentCell = (MYSlideBarViewCell *)[self.collectionView cellForItemAtIndexPath:[NSIndexPath indexPathForRow:index inSection:0]];
-    return CGRectMake(currentCell.frame.origin.x, self.bounds.size.height - 2, titleWidth, 2);
->>>>>>> a8c51632bf1df33e7d6ca18c1ca4b498f75da3e5
-}
-
-- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    self.selectedIndex = indexPath.row;
-    _ignoreAnimation = true;
-}
-
-<<<<<<< HEAD
 #pragma mark -
-#pragma mark 功能性方法
-- (UIColor *)transformFromColor:(UIColor*)fromColor toColor:(UIColor *)toColor progress:(CGFloat)progress {
-    
-    progress = progress >= 1 ? 1 : progress;
-    
-    progress = progress <= 0 ? 0 : progress;
-    
-    const CGFloat * fromeComponents = CGColorGetComponents(fromColor.CGColor);
-    
-    const CGFloat * toComponents = CGColorGetComponents(toColor.CGColor);
-    
-    size_t  fromColorNumber = CGColorGetNumberOfComponents(fromColor.CGColor);
-    size_t  toColorNumber = CGColorGetNumberOfComponents(toColor.CGColor);
-    
-=======
-#pragma mark - setter & getter
+#pragma mark Setter
 - (void)setSelectedIndex:(NSInteger)selectedIndex {
+    
     _selectedIndex = selectedIndex;
     
-    _shadow.frame = [self shadowRectOfIndex:selectedIndex];
+    // 更新阴影位置（延迟是为了避免cell不在屏幕上显示时，造成的获取frame失败问题）
+    CGFloat rectX = [self shadowRectOfIndex:_selectedIndex].origin.x;
+    if (rectX <= 0) {
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 0.25 * NSEC_PER_SEC), dispatch_get_main_queue(), ^(void){
+            _shadow.frame = [self shadowRectOfIndex:_selectedIndex];
+        });
+    } else {
+        _shadow.frame = [self shadowRectOfIndex:_selectedIndex];
+    }
     
     // 居中滚动标题
-    [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForRow:selectedIndex inSection:0] atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:YES];
+    [_collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForRow:_selectedIndex inSection:0] atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:true];
     
-    [self.collectionView reloadData];
+    // 更新字体大小
+    [_collectionView reloadData];
     
     // 执行代理方法
     if ([_delegate respondsToSelector:@selector(slideBarSelectedAtIndex:)]) {
@@ -200,24 +105,29 @@ static NSString *reuseIdentifier = @"MYSlideBarViewCell";
     }
 }
 
-// 更新下划线位置
+- (void)setShowTitlesInNavBar:(BOOL)showTitlesInNavBar {
+    _showTitlesInNavBar = showTitlesInNavBar;
+    self.backgroundColor = [UIColor clearColor];
+    _bottomLine.hidden = true;
+    _shadow.hidden = true;
+}
+
+// 更新阴影位置
 - (void)setProgress:(CGFloat)progress {
     _progress = progress;
     // 如果手动点击则不执行以下动画
     if (_ignoreAnimation) {
         return;
     }
-    // 更新下划线位置
+    // 更新阴影位置
     [self updateShadowPosition:progress];
     // 更新标题颜色、大小
     [self updateItem:progress];
 }
 
-- (void)setTitles:(NSArray *)titles {
-    _titles = titles;
-    [self.collectionView reloadData];
-}
-
+#pragma mark -
+#pragma mark 执行阴影过渡动画
+// 更新阴影位置
 - (void)updateShadowPosition:(CGFloat)progress {
     
     // progress > 1 向左滑动表格反之向右滑动表格
@@ -243,7 +153,7 @@ static NSString *reuseIdentifier = @"MYSlideBarViewCell";
     
     // 更新位置
     CGFloat distance = CGRectGetMidX(nextRect) - CGRectGetMidX(currentRect);
-    _shadow.center = CGPointMake(CGRectGetMidX(currentRect) + progress* distance, _shadow.center.y);
+    _shadow.center = CGPointMake(CGRectGetMidX(currentRect) + progress * distance, _shadow.center.y);
 }
 
 // 更新标题颜色
@@ -269,76 +179,84 @@ static NSString *reuseIdentifier = @"MYSlideBarViewCell";
     nextItem.transform = CGAffineTransformMakeScale(nextItemScale, nextItemScale);
 }
 
-- (void)setItemSelectedColor:(UIColor *)itemSelectedColor {
-    _itemSelectedColor = itemSelectedColor;
-    _shadow.backgroundColor = itemSelectedColor;
+#pragma mark -
+#pragma mark CollectionViewDelegate
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return _titles.count;
 }
 
-- (void)setHideShadow:(BOOL)hideShadow {
-    _hideShadow = hideShadow;
-    _shadow.hidden = _hideShadow;
+- (CGSize)collectionView:(UICollectionView *)collectionView
+                  layout:(UICollectionViewLayout *)collectionViewLayout
+  sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    NSString *title = _titles[indexPath.row];
+    CGFloat titleWidth = [title sizeWithMaxWidth:MAXFLOAT font:[UIFont boldSystemFontOfSize:ItemFontSize]].width;
+    return CGSizeMake(titleWidth, _collectionView.bounds.size.height);
 }
 
-#pragma mark - Private Method
-- (UIColor *)transformFromColor:(UIColor*)fromColor toColor:(UIColor *)toColor progress:(CGFloat)progress
-{
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    MYSlideBarViewCell *item = [collectionView dequeueReusableCellWithReuseIdentifier:@"MYSlideBarViewCell" forIndexPath:indexPath];
+    item.textLabel.text = _titles[indexPath.row];
+    item.textLabel.font = [UIFont boldSystemFontOfSize:ItemFontSize];
+    
+    CGFloat scale = indexPath.row == _selectedIndex ? ItemMaxScale : 1;
+    item.transform = CGAffineTransformMakeScale(scale, scale);
+    
+    item.textLabel.textColor = indexPath.row == _selectedIndex ? _itemSelectedColor : _itemNormalColor;
+    return item;
+}
+
+- (CGRect)shadowRectOfIndex:(NSInteger)index {
+    
+    NSString *title = _titles[index];
+    CGFloat titleWidth = [title sizeWithMaxWidth:MAXFLOAT font:[UIFont boldSystemFontOfSize:ItemFontSize]].width;
+    
+    return CGRectMake([_collectionView cellForItemAtIndexPath:[NSIndexPath indexPathForRow:index inSection:0]].frame.origin.x, self.bounds.size.height - 2, titleWidth, 2);
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    self.selectedIndex = indexPath.row;
+    _ignoreAnimation = true;
+}
+
+#pragma mark -
+#pragma mark 功能性方法
+- (UIColor *)transformFromColor:(UIColor *)fromColor
+                        toColor:(UIColor *)toColor
+                       progress:(CGFloat)progress {
+    
+    if (!fromColor || !toColor) {
+        NSLog(@"Warning !!! color is nil");
+        return [UIColor blackColor];
+    }
+    
     progress = progress >= 1 ? 1 : progress;
     progress = progress <= 0 ? 0 : progress;
+    
     const CGFloat * fromeComponents = CGColorGetComponents(fromColor.CGColor);
     const CGFloat * toComponents = CGColorGetComponents(toColor.CGColor);
-    size_t fromColorNumber = CGColorGetNumberOfComponents(fromColor.CGColor);
-    size_t toColorNumber = CGColorGetNumberOfComponents(toColor.CGColor);
->>>>>>> a8c51632bf1df33e7d6ca18c1ca4b498f75da3e5
+    
+    size_t  fromColorNumber = CGColorGetNumberOfComponents(fromColor.CGColor);
+    size_t  toColorNumber = CGColorGetNumberOfComponents(toColor.CGColor);
+    
     if (fromColorNumber == 2) {
         CGFloat white = fromeComponents[0];
         fromColor = [UIColor colorWithRed:white green:white blue:white alpha:1];
         fromeComponents = CGColorGetComponents(fromColor.CGColor);
     }
-<<<<<<< HEAD
     
-=======
->>>>>>> a8c51632bf1df33e7d6ca18c1ca4b498f75da3e5
     if (toColorNumber == 2) {
         CGFloat white = toComponents[0];
         toColor = [UIColor colorWithRed:white green:white blue:white alpha:1];
         toComponents = CGColorGetComponents(toColor.CGColor);
     }
-<<<<<<< HEAD
     
-    CGFloat red = fromeComponents[0]*(1 - progress) + toComponents[0]*progress;
-    CGFloat green = fromeComponents[1]*(1 - progress) + toComponents[1]*progress;
-    CGFloat blue = fromeComponents[2]*(1 - progress) + toComponents[2]*progress;
-    
-    return [UIColor colorWithRed:red green:green blue:blue alpha:1];
-}
-
-#pragma mark - setter & getter
-- (UICollectionView *)collectionView {
-    if (!_collectionView) {
-        UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
-        layout.minimumLineSpacing = 20;
-        layout.sectionInset = UIEdgeInsetsMake(0, 20, 0, 20);
-        layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
-        _collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:layout];
-        _collectionView.delegate = self;
-        _collectionView.dataSource = self;
-        [_collectionView registerClass:[MYSlideBarViewCell class] forCellWithReuseIdentifier:@"MYSlideBarViewCell"];
-        [self addSubview:_collectionView];
-    }
-    return _collectionView;
-}
-
-- (UIView *)slideView {
-    if (!_slideView) {
-        _slideView = [[UIView alloc] init];
-    }
-    return _slideView;
-=======
     CGFloat red = fromeComponents[0] * (1 - progress) + toComponents[0] * progress;
     CGFloat green = fromeComponents[1] * (1 - progress) + toComponents[1] * progress;
     CGFloat blue = fromeComponents[2] * (1 - progress) + toComponents[2] * progress;
+    
     return [UIColor colorWithRed:red green:green blue:blue alpha:1];
->>>>>>> a8c51632bf1df33e7d6ca18c1ca4b498f75da3e5
 }
 
 @end

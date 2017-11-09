@@ -29,7 +29,7 @@
     if (!_textLabel) {
         _textLabel = [[UILabel alloc] init];
         _textLabel.textAlignment = NSTextAlignmentCenter;
-        _textLabel.font = [UIFont systemFontOfSize:17.0];
+        _textLabel.font = [UIFont boldSystemFontOfSize:17.0];
         _textLabel.textColor = [UIColor blackColor];
         [self.contentView addSubview:_textLabel];
     }
