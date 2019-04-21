@@ -97,8 +97,6 @@ static CGFloat const animationTime = 0.25;
     [self.view addSubview:leftVc.view];
     [self addChildViewController:leftVc];
     self.leftVc = leftVc;
-    // 展示
-    [self showAnimation];
 }
 
 /**

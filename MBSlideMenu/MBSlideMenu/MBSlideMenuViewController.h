@@ -12,6 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MBSlideMenuViewController : UIViewController
 
+// 展示
+- (void)showAnimation;
+
 @end
 
 NS_ASSUME_NONNULL_END

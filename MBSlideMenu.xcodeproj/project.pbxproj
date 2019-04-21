@@ -16,6 +16,8 @@
 		322C6600226C699D003655B5 /* MBSlideMenuTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 322C65FF226C699D003655B5 /* MBSlideMenuTests.m */; };
 		322C660B226C699D003655B5 /* MBSlideMenuUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 322C660A226C699D003655B5 /* MBSlideMenuUITests.m */; };
 		322C661B226C6A34003655B5 /* MBSlideMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 322C661A226C6A34003655B5 /* MBSlideMenuViewController.m */; };
+		322C661E226C6E9E003655B5 /* MBNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 322C661D226C6E9E003655B5 /* MBNavigationBar.m */; };
+		4D4DA2AF36074D2CB81CD54B /* libPods-MBSlideMenu.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 82E7F2C9D80785EF20CA2D77 /* libPods-MBSlideMenu.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04CF490CF61F3E46259A7241 /* Pods-MBSlideMenu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MBSlideMenu.release.xcconfig"; path = "Target Support Files/Pods-MBSlideMenu/Pods-MBSlideMenu.release.xcconfig"; sourceTree = "<group>"; };
 		322C65E3226C699D003655B5 /* MBSlideMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MBSlideMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		322C65E6226C699D003655B5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		322C65E7226C699D003655B5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -54,6 +57,10 @@
 		322C660C226C699D003655B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		322C6619226C6A34003655B5 /* MBSlideMenuViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBSlideMenuViewController.h; sourceTree = "<group>"; };
 		322C661A226C6A34003655B5 /* MBSlideMenuViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBSlideMenuViewController.m; sourceTree = "<group>"; };
+		322C661C226C6E9E003655B5 /* MBNavigationBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBNavigationBar.h; sourceTree = "<group>"; };
+		322C661D226C6E9E003655B5 /* MBNavigationBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBNavigationBar.m; sourceTree = "<group>"; };
+		82E7F2C9D80785EF20CA2D77 /* libPods-MBSlideMenu.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MBSlideMenu.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0AB9B9AD5C31514940E9787 /* Pods-MBSlideMenu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MBSlideMenu.debug.xcconfig"; path = "Target Support Files/Pods-MBSlideMenu/Pods-MBSlideMenu.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D4DA2AF36074D2CB81CD54B /* libPods-MBSlideMenu.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +96,8 @@
 				322C65FE226C699D003655B5 /* MBSlideMenuTests */,
 				322C6609226C699D003655B5 /* MBSlideMenuUITests */,
 				322C65E4226C699D003655B5 /* Products */,
+				63931EC5A9E540A90CA432E6 /* Pods */,
+				8A4CAE285821772E10A9A2C5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -109,6 +119,8 @@
 				322C65E7226C699D003655B5 /* AppDelegate.m */,
 				322C65E9226C699D003655B5 /* ViewController.h */,
 				322C65EA226C699D003655B5 /* ViewController.m */,
+				322C661C226C6E9E003655B5 /* MBNavigationBar.h */,
+				322C661D226C6E9E003655B5 /* MBNavigationBar.m */,
 				322C65EC226C699D003655B5 /* Main.storyboard */,
 				322C65EF226C699D003655B5 /* Assets.xcassets */,
 				322C65F1226C699D003655B5 /* LaunchScreen.storyboard */,
@@ -145,6 +157,23 @@
 			path = MBSlideMenu;
 			sourceTree = "<group>";
 		};
+		63931EC5A9E540A90CA432E6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B0AB9B9AD5C31514940E9787 /* Pods-MBSlideMenu.debug.xcconfig */,
+				04CF490CF61F3E46259A7241 /* Pods-MBSlideMenu.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		8A4CAE285821772E10A9A2C5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				82E7F2C9D80785EF20CA2D77 /* libPods-MBSlideMenu.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -152,6 +181,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 322C660F226C699D003655B5 /* Build configuration list for PBXNativeTarget "MBSlideMenu" */;
 			buildPhases = (
+				C177449DEFBBFC45AD7D8FCB /* [CP] Check Pods Manifest.lock */,
 				322C65DF226C699D003655B5 /* Sources */,
 				322C65E0226C699D003655B5 /* Frameworks */,
 				322C65E1226C699D003655B5 /* Resources */,
@@ -270,6 +300,31 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		C177449DEFBBFC45AD7D8FCB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MBSlideMenu-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		322C65DF226C699D003655B5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -277,6 +332,7 @@
 			files = (
 				322C65EB226C699D003655B5 /* ViewController.m in Sources */,
 				322C65F6226C699D003655B5 /* main.m in Sources */,
+				322C661E226C6E9E003655B5 /* MBNavigationBar.m in Sources */,
 				322C661B226C6A34003655B5 /* MBSlideMenuViewController.m in Sources */,
 				322C65E8226C699D003655B5 /* AppDelegate.m in Sources */,
 			);
@@ -447,6 +503,7 @@
 		};
 		322C6610226C699D003655B5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B0AB9B9AD5C31514940E9787 /* Pods-MBSlideMenu.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -463,6 +520,7 @@
 		};
 		322C6611226C699D003655B5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 04CF490CF61F3E46259A7241 /* Pods-MBSlideMenu.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
