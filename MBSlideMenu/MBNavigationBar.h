@@ -25,7 +25,6 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)setBackgroundAlpha:(CGFloat)alpha;
 - (void)setTintColor:(UIColor *)color;
 
-
 - (void)setLeftButtonWithNormal:(UIImage *)normal highlighted:(UIImage *)highlighted;
 - (void)setLeftButtonWithImage:(UIImage *)image;
 - (void)setLeftButtonWithTitle:(NSString *)title titleColor:(UIColor *)titleColor;

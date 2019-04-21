@@ -16,8 +16,6 @@ static CGFloat const animationTime = 0.25;
 @property (nonatomic, weak) UIView *bgView;
 /** leftVc */
 @property (nonatomic, weak) UIViewController *leftVc;
-/** hasShow */
-@property (nonatomic, assign) BOOL hasShow;
 
 @end
 
@@ -34,31 +32,6 @@ static CGFloat const animationTime = 0.25;
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:YES animated:YES];
-}
-
-- (void)showAnimation {
-    self.view.userInteractionEnabled = NO;
-    // 根据当前x，计算隐藏时间
-    CGFloat time = fabs(self.leftVc.view.frame.origin.x / self.leftVc.view.frame.size.width) * animationTime;
-    [UIView animateWithDuration:time animations:^{
-        self.leftVc.view.frame = CGRectMake(0, 0, self.leftVc.view.frame.size.width, [UIScreen mainScreen].bounds.size.height);
-        self.bgView.alpha = 0.5;
-    } completion:^(BOOL finished) {
-        self.view.userInteractionEnabled = YES;
-    }];
-}
-
-- (void)closeAnimation {
-    self.view.userInteractionEnabled = NO;
-    // 根据当前x，计算隐藏时间
-    CGFloat time = (1 - fabs(self.leftVc.view.frame.origin.x / self.leftVc.view.frame.size.width)) * animationTime;
-    [UIView animateWithDuration:time animations:^{
-        self.leftVc.view.frame = CGRectMake(-self.leftVc.view.frame.size.width, 0, self.leftVc.view.frame.size.width, [UIScreen mainScreen].bounds.size.height);
-        self.bgView.alpha = 0.0;
-    } completion:^(BOOL finished) {
-        // 隐藏个人中心
-        [self removeFromParentViewController];
-    }];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -97,6 +70,31 @@ static CGFloat const animationTime = 0.25;
     [self.view addSubview:leftVc.view];
     [self addChildViewController:leftVc];
     self.leftVc = leftVc;
+}
+
+- (void)showAnimation {
+    self.view.userInteractionEnabled = NO;
+    // 根据当前x，计算隐藏时间
+    CGFloat time = fabs(self.leftVc.view.frame.origin.x / self.leftVc.view.frame.size.width) * animationTime;
+    [UIView animateWithDuration:time animations:^{
+        self.leftVc.view.frame = CGRectMake(0, 0, self.leftVc.view.frame.size.width, [UIScreen mainScreen].bounds.size.height);
+        self.bgView.alpha = 0.5;
+    } completion:^(BOOL finished) {
+        self.view.userInteractionEnabled = YES;
+    }];
+}
+
+- (void)closeAnimation {
+    self.view.userInteractionEnabled = NO;
+    // 根据当前x，计算隐藏时间
+    CGFloat time = (1 - fabs(self.leftVc.view.frame.origin.x / self.leftVc.view.frame.size.width)) * animationTime;
+    [UIView animateWithDuration:time animations:^{
+        self.leftVc.view.frame = CGRectMake(-self.leftVc.view.frame.size.width, 0, self.leftVc.view.frame.size.width, [UIScreen mainScreen].bounds.size.height);
+        self.bgView.alpha = 0.0;
+    } completion:^(BOOL finished) {
+        // 隐藏个人中心
+        [self removeFromParentViewController];
+    }];
 }
 
 /**

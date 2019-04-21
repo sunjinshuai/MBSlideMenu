@@ -77,7 +77,7 @@
     return self;
 }
 
--(void)setupView {
+- (void)setupView {
     [self addSubview:self.backgroundView];
     [self addSubview:self.backgroundImageView];
     [self addSubview:self.leftButton];
@@ -91,7 +91,7 @@
 
 - (void)updateFrame {
     NSInteger top = ITGSafeAreaInsets().top;
-    NSInteger margin = 0;
+    NSInteger margin = 20;
     NSInteger buttonHeight = 44;
     NSInteger buttonWidth = 44;
     NSInteger titleLabelHeight = 44;
