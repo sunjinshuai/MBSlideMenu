@@ -31,17 +31,25 @@ static CGFloat const animationTime = 0.25;
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    [self.navigationController setNavigationBarHidden:YES animated:YES];
+    [self.navigationController setNavigationBarHidden:YES animated:animated];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
-    [self.navigationController setNavigationBarHidden:NO animated:YES];
+    [self.navigationController setNavigationBarHidden:NO animated:animated];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor clearColor];
+    
+    [self initSubViews];
+
+    [self addTapGesture];
+    [self addChildViewController];
+}
+
+- (void)initSubViews {
     // 半透明的view
     UIView *bgView = [[UIView alloc] init];
     bgView.backgroundColor = [UIColor blackColor];
@@ -49,23 +57,25 @@ static CGFloat const animationTime = 0.25;
     bgView.alpha = 0;
     [self.view addSubview:bgView];
     self.bgView = bgView;
+}
+
+- (void)addTapGesture {
     
     // 添加两个手势
-    UITapGestureRecognizer *tapGestureRec = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(closeSideBar)];
-    [bgView addGestureRecognizer:tapGestureRec];
+    UITapGestureRecognizer *tapGestureRec = [[UITapGestureRecognizer alloc] initWithTarget:self
+                                                                                    action:@selector(closeSideBar)];
+    [self.bgView addGestureRecognizer:tapGestureRec];
     
-    UIPanGestureRecognizer *panGestureRec = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(moveViewWithGesture:)];
+    UIPanGestureRecognizer *panGestureRec = [[UIPanGestureRecognizer alloc] initWithTarget:self
+                                                                                    action:@selector(moveViewWithGesture:)];
     [self.view addGestureRecognizer:panGestureRec];
-    
+}
+
+- (void)addChildViewController {
     // 添加控制器
     UIViewController *leftVc = [[UIViewController alloc] init];
     leftVc.view.backgroundColor = [UIColor redColor];
     CGFloat width = [UIScreen mainScreen].bounds.size.width - 50;
-    if ([UIScreen mainScreen].bounds.size.width > 375) {
-        width -= 50;
-    } else if ([UIScreen mainScreen].bounds.size.width > 320) {
-        width = width - 25;
-    }
     leftVc.view.frame = CGRectMake(-width, 0, width, [UIScreen mainScreen].bounds.size.height);
     [self.view addSubview:leftVc.view];
     [self addChildViewController:leftVc];
